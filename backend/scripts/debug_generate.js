@@ -1,0 +1,34 @@
+const gen = require('../src/utils/cigGenerator').default;
+
+const data = {
+  cliente: 'Test',
+  tipoIdentificacion: 'CUIT',
+  identificacionCliente: '30715312405',
+  cuit: '30715312405',
+  tipoDocumento: 'PC',
+  idDocumento: '',
+  idInterna: '',
+  division: '',
+  codMoneda: '00',
+  fechaPago: '2025-10-20',
+  sucursalPago: '101',
+  formaPago: '2',
+  idPago: '',
+  pagoParcial: 'N',
+  importePago: 66498,
+  nroCheque: '3041012',
+  fechaAcred: '2025-11-10',
+  importeCheque: 66498,
+  codBanco: '007',
+  marcaInformado: 'N',
+  marcaAnulado: 'N',
+  docPago: '',
+  tipoCanal: '07',
+  descCanal: 'T.AUTOSERV.C/R',
+  boletaCash: '000000000',
+  observaciones: ''
+};
+
+const line = gen.generateDetalleDebug(data);
+console.log('LEN:', line.length);
+console.log(line);
